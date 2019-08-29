@@ -74,6 +74,9 @@ target = S
 
 
 block = normalize(Abs(App(App(0, S), K))) # Abs(Abs(Abs(Abs(App(App(1, 0), App(3, Abs(1)))))))
+target = Abs(0)
+target = K
+target = S
 target = Abs(Abs(App(0, 1)))
 # ((A (A (A A))) (((A (A (A (A A)))) (A A)) (A A))) → B
 
