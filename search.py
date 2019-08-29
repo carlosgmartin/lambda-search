@@ -39,15 +39,50 @@ def dim(string):
 
 
 
+
+
+block = Abs(Abs(Abs(Abs(App(App(1, 0), App(3, Abs(1)))))))
+# https://math.stackexchange.com/a/180263/76284
+target = S
+# (((A (((A (((A A) A) (A A))) A) (A A))) A) (A A)) → K
+# last ((((ι (ι ((ι (ι ((ι ι) (ι ι)))) (ι ι)))) (ι ι)) (ι ι)) ((ι ι) ι))
+
+
+
+block = Abs(Abs(Abs(App(App(1, Abs(Abs(2))), App(2, 0)))))
+# https://math.stackexchange.com/questions/2523938/can-we-rule-out-candidate-single-axiom-bases-for-hi-via-curry-howard?noredirect=1&lq=1
+target = S
+
+
+
+
+
+
+
+
+
+block = Abs(Abs(Abs(Abs(
+  App(App(1, 0), App(3, Abs(1)))
+)))) # CCCpqrCsCCqCrtCqt
+block = Abs(Abs(Abs(Abs(
+  App(App(2, 0), App(3, Abs(1)))
+)))) # CCCpqrCCqCrsCpCqs
+target = S
+
+
+
+
+
 block = normalize(Abs(App(App(0, S), K))) # Abs(Abs(Abs(Abs(App(App(1, 0), App(3, Abs(1)))))))
+target = Abs(0)
+target = K
+target = S
 target = Abs(Abs(App(0, 1)))
 # ((A (A (A A))) (((A (A (A (A A)))) (A A)) (A A))) → B
 
 
-block = Abs(Abs(Abs(Abs(App(App(1, 0), App(3, Abs(1)))))))
-target = S
-# (((A (((A (((A A) A) (A A))) A) (A A))) A) (A A)) → K
-# last ((((ι (ι ((ι (ι ((ι ι) (ι ι)))) (ι ι)))) (ι ι)) (ι ι)) ((ι ι) ι))
+
+
 
 
 
